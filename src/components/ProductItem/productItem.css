@@ -1,0 +1,199 @@
+/* ====== Product Card Container ====== */
+.product-card {
+    border: 1px solid #c0c0c0;
+    background: linear-gradient(to bottom, #f9f9f9, #e6f7ff);
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: 4px 10px 15px rgba(0, 0, 0, 0.326);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    max-width: 21rem;
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.product-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.15);
+  
+    border: 2px solid  rgb(46, 3, 87);
+    background-color: #d6edf8;
+}
+
+/* ====== Product Image Styling ====== */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.product-card img,
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease-in-out;
+}
+
+.product-card:hover img {
+    transform: scale(1.09);
+}
+
+/* ====== Product Title ====== */
+.product-card .product-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin: 1rem 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+/* ====== Product Price ====== */
+.product-card .product-price {
+    font-size: 1.125rem;
+    color: rgb(46, 3, 87);
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+/* ====== Add to Cart Button ====== */
+.product-card .add-to-cart-btn {
+    background: linear-gradient(135deg,   rgb(46, 3, 87),  rgb(143, 43, 237));
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 1.125rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.product-card .add-to-cart-btn:hover {
+    background: linear-gradient(135deg,  rgb(187, 156, 217),  rgb(46, 3, 87));
+}
+
+/* ====== Anchor Reset ====== */
+.product-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ====== Skeleton Loader (Shimmer Effect) ====== */
+.image-skeleton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(100deg, #eeeeee 20%, #dddddd 40%, #eeeeee 60%);
+    background-size: 200% 100%;
+    animation: shimmerMove 0.9s infinite ease-in-out;
+}
+
+@keyframes shimmerMove {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+/* ====== Image Visibility Toggle ====== */
+.product-image.hidden {
+    opacity: 0;
+}
+
+.product-image.visible {
+    opacity: 1;
+}
+
+/* ====== Tablet View (≤768px) ====== */
+@media (max-width: 768px) {
+    .product-card {
+        padding: 1rem;
+        max-width: 90%;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .image-wrapper {
+        aspect-ratio: 4 / 3;
+        height: auto;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #f0f0f0;
+    }
+
+    .product-image {
+        object-fit: contain;
+        border: none;
+    }
+
+    .product-card .product-title {
+        font-size: 1.1rem;
+        margin: 0.8rem 0;
+    }
+
+    .product-card .product-price {
+        font-size: 1rem;
+        margin: 0.8rem 0;
+    }
+
+    .product-card .add-to-cart-btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+        margin-top: 1rem;
+    }
+}
+
+/* ====== Mobile View (≤480px) ====== */
+@media (max-width: 480px) {
+    .product-card {
+        max-width: 100%;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .image-wrapper {
+        aspect-ratio: 3 / 2;
+        height: auto;
+    }
+
+    .product-card img,
+    .product-image {
+        object-fit: contain;
+    }
+
+    .product-card .product-title {
+        font-size: 1rem;
+    }
+
+    .product-card .product-price {
+        font-size: 0.95rem;
+    }
+
+    .product-card .add-to-cart-btn {
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem;
+    }
+}

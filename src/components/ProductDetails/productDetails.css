@@ -1,0 +1,167 @@
+
+/* ====== Back Button Styling ====== */
+.back-button {
+    display: inline-block;
+    margin: 2rem 0 1rem 2rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #f0f4f8;
+    color: rgba(0, 0, 0, 0.901);
+    border: 1px solid #007bff;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #007bff;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.product-detail-container {
+    /* border: 10px solid black; */
+    padding: 2rem;
+    padding-top: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10rem;
+}
+
+/* ====== Title Styling ====== */
+.product-detail-container h2 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ====== Image Styling ====== */
+.product-detail-container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 10px #ffffff;
+    background-color: #ffffff;
+}
+
+/* ====== Price Styling ====== */
+.product-detail-container .product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+/* ====== Description Styling ====== */
+.product-detail-container .product-description {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* ====== Button Styling ====== */
+.product-detail-container .add-to-cart-btn {
+    background: linear-gradient(135deg, #ffffff, #00d4ff);
+    color: white;
+    border: none;
+    padding: 13px 30px;
+    font-size: 1.50rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.product-detail-container .add-to-cart-btn:hover {
+    background: linear-gradient(135deg,  #0091d6, #ffffff); /* Darker gradient on hover */
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+/* ====== Error and Loading Styling ====== */
+.product-description{
+    /* background-color: red; */
+    font-size: 100px;
+    width: 60%;
+    padding: 1.2rem;
+    background: #ededed;
+}
+
+/* ====== Responsive Styling ====== */
+@media (max-width: 768px) {
+    .product-detail-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .product-detail-container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .product-detail-container img {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .product-detail-container .product-price {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .product-detail-container .product-description {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .product-detail-container .add-to-cart-btn {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+    }
+
+    .back-button {
+        margin: 1rem 0 1rem 0;
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-detail-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .product-detail-container .product-price {
+        font-size: 1.05rem;
+    }
+
+    .product-detail-container .product-description {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    .product-detail-container .add-to-cart-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .back-button {
+        font-size: 0.85rem;
+        padding: 0.45rem 0.9rem;
+    }
+}
+

@@ -1,0 +1,125 @@
+/* ====== Main Container ====== */
+.product-list-container {
+    padding: 0 2rem;
+    background:linear-gradient(to right, rgb(147, 147, 213), rgb(59, 59, 128), rgb(104, 104, 203)); /* Smooth gradient background */
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    border: 2px solid transparent;
+    /* border: 4px solid red; */
+    padding-bottom: 4rem;
+}
+
+/* ====== Search Input Styling ====== */
+.search-input {
+    padding: .9rem .5rem;
+    width: 100%;
+    max-width: 650px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    outline: none;
+    border: 2px solid #fff9f9;
+    display: block;
+    margin: 2rem auto;
+    color: rgb(64, 64, 64);
+    background-color: rgb(234, 234, 233);
+}
+
+.search-input:focus {
+    border-color: #1a92fc;
+}
+
+
+/* ====== Product Grid Styling ====== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 3rem;
+    justify-items: center;
+    padding: 0; 
+}
+
+/* ====== Error Message Styling ====== */
+.error-message {
+    color: #9e0000;
+    font-size: 2rem;
+    text-align: center;
+    /* background: #000; */
+    border: 2px solid rgba(255, 255, 255, 0.43);
+    padding: 10rem;
+    border-radius: 1rem;
+    width: 50%;
+    margin: 2rem auto;
+}
+
+/* ====== Responsive Design ====== */
+
+/* ====== Tablet View (≤ 768px) ====== */
+@media (max-width: 768px) {
+    .product-list-container {
+        padding: 0 1.5rem; 
+        background: linear-gradient(to right, rgba(243, 140, 181, 0.43), #74cce991, #8fa2e794);
+    }
+
+    .search-input {
+        width: 100%;
+        max-width: 100%;
+        font-size: 1.1rem; 
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust grid layout for smaller screens */
+    }
+
+    .error-message {
+        font-size: 1.5rem; 
+        padding: 6rem; 
+        width: 80%; 
+    }
+}
+
+/* ====== Mobile View (≤ 480px) ====== */
+@media (max-width: 480px) {
+    .product-list-container {
+        padding: 0 1rem; /* Even smaller padding for mobile */
+        background: linear-gradient(to right, rgba(243, 140, 181, 0.43), #74cce991, #8fa2e794);
+    }
+
+    .search-input {
+        padding: .8rem .4rem;
+        font-size: 1rem; 
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    }
+
+    .error-message {
+        font-size: 1.2rem; 
+        padding: 5rem; 
+        width: 90%;
+    }
+}
+
+/* ====== Very Small Screens (≤ 360px) ====== */
+@media (max-width: 360px) {
+    .product-list-container {
+        padding: 0 0.5rem; 
+        background: linear-gradient(to right, rgba(243, 140, 181, 0.43), #74cce991, #8fa2e794);
+    }
+
+    .search-input {
+        padding: .7rem .3rem;
+        font-size: 0.9rem; 
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .error-message {
+        font-size: 1rem; 
+        padding: 4rem; 
+        width: 100%;
+    }
+}

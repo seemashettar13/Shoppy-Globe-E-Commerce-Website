@@ -1,0 +1,44 @@
+.shimmer {
+    background: linear-gradient(100deg, #eeeeee 20%, #dddddd 40%, #eeeeee 60%);
+    background-size: 200% 100%;
+    animation: shimmerMove 1.6s infinite linear;
+    border-radius: 8px;
+}
+
+.skeleton-title {
+    height: 28px;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.skeleton-image {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.skeleton-price {
+    height: 20px;
+    width: 30%;
+    margin-bottom: 16px;
+}
+
+.skeleton-description {
+    height: 80px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.skeleton-button {
+    height: 40px;
+    width: 160px;
+}
+
+@keyframes shimmerMove {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
