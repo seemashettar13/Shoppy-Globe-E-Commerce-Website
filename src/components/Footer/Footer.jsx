@@ -26,7 +26,7 @@ function Footer() {
                     <h4>Follow Us</h4>
                     <div className="social-icons">
                      
-                        <a href="/#" aria-label="Github"><FaGithub /></a>
+                        <a href="https://github.com/seemashettar13/Shoppy-Globe-E-Commerce-Website" aria-label="Github"><FaGithub /></a>
                        <a href="/#" aria-label="Facebook"><FaFacebookF /></a>
                         <a href="/#" aria-label="Twitter"><FaTwitter /></a>
                         <a href="/#" aria-label="LinkedIn"><FaLinkedinIn /></a>
